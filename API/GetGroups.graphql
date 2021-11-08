@@ -1,0 +1,8 @@
+query GetGroups {
+    groups(order_by: {id: asc}) {
+        title
+        id
+        tasks_id
+    }
+}
+
