@@ -47,7 +47,7 @@ const Tasks: FC<TasksProps> = () => {
 					</Col>
 				))}
 				{isLoading &&
-					Array.from({ length: LIMIT }, (el, i) => (
+					Array.from({ length: LIMIT }, (_, i) => (
 						<Col span={12} offset={6}>
 							<CustomSkeleton
 								avatar

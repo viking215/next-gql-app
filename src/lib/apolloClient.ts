@@ -15,8 +15,11 @@ let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
 
 const isServer = typeof window === "undefined";
 
+const URL = "https://gql-2.test.serafim.help/v1/graphql";
+const SECRET = "123-123-123-123-123";
+
 const httpLink = createHttpLink({
-	uri: process.env.URL,
+	uri: URL,
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -24,7 +27,7 @@ const authLink = setContext((_, { headers }) => {
 	return {
 		headers: {
 			...headers,
-			"x-hasura-admin-secret": process.env.ADMIN_SECRET,
+			"x-hasura-admin-secret": SECRET,
 			"content-type": "application/json",
 		},
 	};
