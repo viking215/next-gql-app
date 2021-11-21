@@ -17,7 +17,7 @@ const CardElement = ({ postData }: CardElementPropsType) => {
 		</div>
 	);
 
-	const created = `Created: ${postData.created_at}`;
+	const created = `Create: ${postData.created_at}`;
 
 	return (
 		<StyledList itemLayout="horizontal">
